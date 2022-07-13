@@ -24,7 +24,7 @@ int serialPortCount()
 
 const char* serialPortName(int i)
 {
-  if(i >= 255)
+  if(i >= MAXPORT)
   {
     return NULL;
   }
@@ -42,7 +42,6 @@ void buildSerialPortList()
     int i = 0;
     while(ports[i] != NULL && i < MAXPORT)
     {
-      
       char* name = sp_get_port_name(ports[i]);
       if(NULL != name)
       {

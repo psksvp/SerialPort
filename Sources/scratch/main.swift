@@ -10,11 +10,11 @@ import Foundation
 import SerialPort
 
 print("helloworld")
-//try readGPS("/dev/cu.usbserial-2140")
+print(SerialPort.availablePorts)
+try readGPS("/dev/cu.usbserial-2140")
 
 //try arduio("/dev/cu.usbserial-2130")
 
-print(SerialPort.availablePorts)
 
 
 func readGPS(_ portPath: String) throws
