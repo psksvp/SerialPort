@@ -46,8 +46,8 @@ void buildSerialPortList()
       char* name = sp_get_port_name(ports[i]);
       if(NULL != name)
       {
+        strncpy(portNames[portCount], name, MAXNAME);
         portCount = portCount + 1;
-        strncpy(portNames[i], name, MAXNAME);
       }
       i = i + 1;
     }
