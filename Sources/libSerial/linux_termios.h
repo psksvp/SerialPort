@@ -24,6 +24,14 @@
 
 #include <stdlib.h>
 
+#ifndef SP_API
+#define SP_API
+#endif
+
+#ifndef SP_PRIV
+#define SP_PRIV
+#endif
+
 SP_PRIV unsigned long get_termios_get_ioctl(void);
 SP_PRIV unsigned long get_termios_set_ioctl(void);
 SP_PRIV size_t get_termios_size(void);
