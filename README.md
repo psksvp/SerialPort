@@ -2,4 +2,4 @@
 
 Swift SerialPort interface based on libSerial in https://github.com/mikepb/go-serial
 
-It should work on Linux and Windows but I have not tested it.
+The code was tested on MacOS and Linux, but it should work on Windows.
