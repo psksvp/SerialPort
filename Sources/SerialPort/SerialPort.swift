@@ -19,7 +19,7 @@ public class SerialPort
   }
   
   ///////
-  public enum Baud
+  public enum Baud: String, CaseIterable, Identifiable
   {
     case b1200
     case b2400
@@ -28,7 +28,9 @@ public class SerialPort
     case b19200
     case b115200
     
-    var value: Int32
+    public var id: Self {self}
+    
+    public var value: Int32
     {
       get
       {
@@ -61,14 +63,16 @@ public class SerialPort
   }
   
   ///////
-  public enum BitSize
+  public enum BitSize: String, CaseIterable, Identifiable
   {
     case five
     case six
     case seven
     case eight
     
-    var value: Int32
+    public var id: Self {self}
+    
+    public var value: Int32
     {
       switch self
       {
@@ -81,13 +85,15 @@ public class SerialPort
   }
   
   ///////
-  public enum Parity
+  public enum Parity: String, CaseIterable, Identifiable
   {
     case none
     case even
     case odd
     
-    var value: sp_parity
+    public var id: Self {self}
+    
+    public var value: sp_parity
     {
       switch self
       {
@@ -98,13 +104,15 @@ public class SerialPort
     }
   }
   
-  public enum Mode
+  public enum Mode: String, CaseIterable, Identifiable
   {
     case read
     case write
     case readWrite
     
-    var value: sp_mode
+    public var id: Self {self}
+    
+    public var value: sp_mode
     {
       switch self
       {

@@ -10,8 +10,12 @@ import Foundation
 import SerialPort
 
 print("helloworld")
-print(SerialPort.availablePorts)
-try readGPS("/dev/cu.usbserial-2140")
+while let s = readLine()
+{
+  print(SerialPort.availablePorts)
+}
+
+//try readGPS("/dev/cu.usbserial-2140")
 
 //try arduio("/dev/cu.usbserial-2130")
 
