@@ -73,7 +73,6 @@ public extension SerialPort
   
   func readAvailable(timeout t: SerialPort.Timeout) throws -> [UInt8]
   {
-    
     let a = self.bytesAvailableForRead
     return  try self.read(size: UInt(a), timeout: t)
   }

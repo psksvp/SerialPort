@@ -26,6 +26,8 @@ public class SerialPort
     case b4800
     case b9600
     case b19200
+    case b38400
+    case b57600
     case b115200
     
     public var id: Self {self}
@@ -41,6 +43,8 @@ public class SerialPort
           case .b4800   : return 4800
           case .b9600   : return 9600
           case .b19200  : return 19200
+          case .b38400  : return 38400
+          case .b57600  : return 57600
           case .b115200 : return 115200
         }
       }
